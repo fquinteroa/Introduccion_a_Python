@@ -478,7 +478,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 \end_layout
 
 \begin_layout Standard
-El intérprete de python evalua:
+El intérprete de python evalúa:
 \end_layout
 
 \begin_layout LyX-Code
@@ -1217,7 +1217,11 @@ Uso especial de
 \family default
 \size default
 \color inherit
- para el formateo de cadenas (como printf en C)
+ para el formateo de cadenas (como 
+\shape italic
+printf
+\shape default
+ en C)
 \end_layout
 
 \end_deeper
@@ -1234,7 +1238,11 @@ and, or, not
 \end_layout
 
 \begin_layout Itemize
-El comando básico de impresión es print.
+El comando básico de impresión es 
+\shape italic
+print
+\shape default
+.
 \end_layout
 
 \begin_layout Itemize
@@ -1331,7 +1339,7 @@ abc
 \end_layout
 
 \begin_layout Standard
-• Se pueden dar apóstrofes sin pareja dentro de las cadenas.
+• Se pueden especificar apóstrofes sin pareja dentro de las cadenas.
 \end_layout
 
 \begin_layout LyX-Code
@@ -1428,7 +1436,7 @@ Use nueva linea para terminar una línea de código.
 
 \begin_deeper
 \begin_layout Itemize
-Use 
+Se usa 
 \family typewriter
 \size small
 \color blue
@@ -1596,18 +1604,14 @@ Asignaciones
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-• Asignar una variable en Python significa establecer un 
+\begin_layout Itemize
+Asignar una variable en Python significa establecer un 
 \color blue
 nombre 
 \color inherit
 que contenga una
-\end_layout
-
-\begin_layout Standard
-
 \color blue
-referencia
+ referencia
 \color inherit
  a algún 
 \color blue
@@ -1616,26 +1620,26 @@ objeto
 .
 \end_layout
 
-\begin_layout Standard
-•
-\size footnotesize
- La asignación crea referencias, no copias-
+\begin_deeper
+\begin_layout Itemize
+La asignación crea referencias, no copias.
 \end_layout
 
-\begin_layout Standard
-• Los nombres en Python no tienen un tipo intrínseco.
+\end_deeper
+\begin_layout Itemize
+Los nombres en Python no tienen un tipo intrínseco.
  Los Objetos tienen tipos.
 \end_layout
 
-\begin_layout Standard
-•
-\size footnotesize
- Python determina el tipo de la referencia automáticamente basado en objeto
+\begin_deeper
+\begin_layout Itemize
+Python determina el tipo de la referencia automáticamente basado en objeto
  de datos asignado a él.
 \end_layout
 
-\begin_layout Standard
-• Se crea un nombre la primera vez que aparece en el lado izquierdo de una
+\end_deeper
+\begin_layout Itemize
+Se crea un nombre la primera vez que aparece en el lado izquierdo de una
  expresión de asignación:
 \end_layout
 
@@ -1645,9 +1649,12 @@ objeto
 x = 3
 \end_layout
 
-\begin_layout Standard
-• Una referencia se borra a través de garbage collection después que cualquier
- nombre ligado a él esta fuera del scope.
+\begin_layout Itemize
+Una referencia se borra a través de 
+\color blue
+garbage collection
+\color inherit
+ después que cualquier nombre ligado a él esta fuera del alcance.
 \end_layout
 
 \end_deeper
@@ -1889,16 +1896,17 @@ Tipos de secuencia
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-1.
- Tupla
+\begin_layout Itemize
+
+\series bold
+Tupla
 \end_layout
 
-\begin_layout Standard
+\begin_deeper
+\begin_layout Itemize
 
-\size footnotesize
 \color black
-• Una secuenca ordenada 
+Una secuenca ordenada 
 \series bold
 \color blue
 inmutable
@@ -1907,59 +1915,49 @@ inmutable
  de articulos
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 
-\size footnotesize
 \color black
-• los artículos pueden ser de tipo mixto, incluyendo colecciones de tipos.
+los artículos pueden ser de tipo mixto, incluyendo colecciones de tipos.
 \end_layout
 
-\begin_layout Standard
-2.
- Cadenas
+\end_deeper
+\begin_layout Itemize
+Cadenas
 \end_layout
 
-\begin_layout Standard
+\begin_deeper
+\begin_layout Itemize
 
-\size small
-\color black
-• 
 \series bold
-\size footnotesize
 \color blue
 Inmutable
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 
-\size small
-\color black
-• 
 \series bold
-\size footnotesize
+\color black
 Conceptualmente similar a las tuplas.
 \end_layout
 
-\begin_layout Standard
-3.
- Lista
+\end_deeper
+\begin_layout Itemize
+Lista
 \end_layout
 
-\begin_layout Standard
+\begin_deeper
+\begin_layout Itemize
 
-\size small
-\color black
-• 
 \series bold
-\size footnotesize
 \color blue
 Mutable
 \series default
-\size small
 \color black
  secuencia ordenada de articulos de tipo mixto.
 \end_layout
 
+\end_deeper
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -1982,27 +1980,21 @@ Sintáxis similar
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-
-\color black
-• 
-\series bold
-Los tres tipos de secuencias (tuplas, cadenas, and listas)
-\end_layout
-
-\begin_layout Standard
+\begin_layout Itemize
 
 \series bold
 \color black
-comparten mucho de la misma sintaxis y funcionalidad.
+Los tres tipos de secuencias (tuplas, cadenas, and listas) comparten mucho
+ de la misma sintaxis y funcionalidad.
 \end_layout
 
-\begin_layout Standard
-• Diferencias principales:
+\begin_layout Itemize
+Diferencias principales:
 \end_layout
 
-\begin_layout Standard
-• 
+\begin_deeper
+\begin_layout Itemize
+
 \series bold
 \size small
 \color black
@@ -2011,19 +2003,21 @@ Tuplas and cadenas son
 inmutables
 \end_layout
 
-\begin_layout Standard
-• Lists son mutables
+\begin_layout Itemize
+Las listas son 
+\color blue
+mutables
 \end_layout
 
-\begin_layout Standard
-• Las operaciones que se muestran en esta sección pueden ser aplicadas a
- todas los tipos de secuencia.
+\begin_layout Itemize
+Las operaciones que se muestran en esta sección pueden ser aplicadas a todas
+ los tipos de secuencia.
 \end_layout
 
-\begin_layout Standard
-• 
+\end_deeper
+\begin_layout Itemize
+
 \series bold
-\size small
 \color black
 La mayoría de ejemplos muestran la operacion sobre uno de ellos.
 \end_layout
@@ -2414,7 +2408,7 @@ antes
 \end_layout
 
 \begin_layout Standard
-You can also use negative indices when slicing.
+También se pueden usar índices negativos en subconjuntos
 \end_layout
 
 \begin_layout LyX-Code
@@ -2536,7 +2530,7 @@ Para hacer una
 \color blue
 copia
 \color inherit
- de una secuencia entera, se puede utilizar [:].
+ de una secuencia entera, se puede utilizar [:]
 \end_layout
 
 \begin_layout LyX-Code
@@ -3112,27 +3106,26 @@ Listas: Mutables
 \end_layout
 
 \end_deeper
-\begin_layout Standard
+\begin_layout Itemize
 
 \series bold
-• Se pueden cambiar las listas.
+Se pueden cambiar las listas.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 
 \series bold
-• El nombre 
+El nombre 
 \color blue
 li
 \color inherit
  aún apunta a la misma referencia de memoria cuando terminamos.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 
 \series bold
-• La mutabilidad de las listas significa que no son tan rápidas como las
- tuplas.
+La mutabilidad de las listas significa que no son tan rápidas como las tuplas.
 \end_layout
 
 \end_deeper
@@ -3499,7 +3492,7 @@ Operaciones sólo en listas 4
 \family typewriter
 >>>
 \family default
- li.sort(some_function)
+ li.sort(alguna_funcion)
 \end_layout
 
 \begin_layout LyX-Code
@@ -4734,14 +4727,14 @@ Clases y Objetos
 \series bold
 \shape italic
 \color black
-Qué es un objeto?
+¿Qué es un objeto?
 \end_layout
 
 \begin_layout Itemize
 
 \series bold
 \color black
-Un artículo de software que contiene variables y métodos.
+Una pieza de software que contiene variables y métodos.
 \end_layout
 
 \begin_layout Itemize
@@ -4809,77 +4802,105 @@ Clase de Ejemplo
 \begin_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color black
-class atomo(objecto):
+class atomo(object):   
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color black
-def __init__(self,noat,x,y,z):
+def __init__(self,noat,x,y,z):     
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color black
-self.noat = noat
+self.noat = noat     
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color black
-self.posicion = (x,y,z)
+self.posicion = (x,y,z)   
 \end_layout
 
 \end_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color black
-def simbolo(self):     # un metodo de la clase
+def simbolo(self):     
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color black
-return NoAt_a_Simbolo[noat]
+NoAt_a_Simbolo = { 1: 'H', 2:'He', 3:'Li', 4:'Be',5:'B', 6:'C' }       
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+return NoAt_a_Simbolo[self.noat]   
 \end_layout
 
 \end_deeper
+\end_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color black
-def __repr__(self):   # sobrecarga impresion
+def __repr__(self):   # sobrecarga impresion     
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color black
-return '%d %10.4f %10.4f %10.4f' %
+return '%d %10.4f %10.4f %10.4f'%(self.noat, self.posicion[0], 
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
 \color black
-(self.noat, self.posicion[0],
+self.posicion[1],self.posicion[2])   
 \end_layout
 
+\end_deeper
+\end_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
+\size tiny
+\color black
+def __str__(self):   # sobrecarga cadena     
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+return '%d %10.4f %10.4f %10.4f'%(self.noat, self.posicion[0], 
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
 \color black
 self.posicion[1],self.posicion[2])
 \end_layout
@@ -4893,39 +4914,39 @@ self.posicion[1],self.posicion[2])
 
 \begin_layout LyX-Code
 
-\size footnotesize
-\color black
+\size tiny
+\color blue
 >>> at = atomo(6,0.0,1.0,2.0)
 \end_layout
 
 \begin_layout LyX-Code
 
-\size footnotesize
-\color black
+\size tiny
+\color blue
 >>> print at
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
-\color black
+\size tiny
+\color blue
 6 0.0000 1.0000 2.0000
 \end_layout
 
 \end_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
-\color black
+\size tiny
+\color blue
 >>> at.simbolo()
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
-\size footnotesize
-\color black
+\size tiny
+\color blue
 'C'
 \end_layout
 
@@ -5085,7 +5106,7 @@ def __repr__(self):
 
 \size scriptsize
 \color black
-str = 'Esta es una molecula llamada %s
+cadena = 'Esta es una molecula llamada %s
 \backslash
 n' % self.nombre
 \end_layout
@@ -5094,7 +5115,7 @@ n' % self.nombre
 
 \size scriptsize
 \color black
-str = str+'Tiene %d atomos
+cadena = cadena +'Tiene %d atomos
 \backslash
 n' % len(self.lista_atomo)
 \end_layout
@@ -5111,7 +5132,7 @@ for atomo in self.lista_atomo:
 
 \size scriptsize
 \color black
-str = str + 'atomo' + '
+cadena = cadena + str(atomo) + '
 \backslash
 n'
 \end_layout
@@ -5121,7 +5142,7 @@ n'
 
 \size scriptsize
 \color black
-return str
+return cadena
 \end_layout
 
 \end_deeper
@@ -5396,7 +5417,7 @@ def __repr__(self):
 
 \size footnotesize
 \color black
-str = 'QM Rifa!
+cadena = 'QM Rifa!
 \backslash
 n'
 \end_layout
@@ -5413,7 +5434,7 @@ for atomo in self.lista_atomo:
 
 \size footnotesize
 \color black
-str = str + 'atomo' + '
+cadena = cadena + 'atomo' + '
 \backslash
 n'
 \end_layout
@@ -5423,7 +5444,7 @@ n'
 
 \size footnotesize
 \color black
-return str
+return cadena
 \end_layout
 
 \end_deeper
@@ -5505,7 +5526,7 @@ self.base = base
 
 \size footnotesize
 \color black
-super(qm_molecula, self).__init__(nombre)
+molecula.__init__(nombre)
 \end_layout
 
 \end_deeper
@@ -5777,6 +5798,20 @@ status open
 
 \begin_layout Frame
 \begin_inset VSpace 12pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/fquinteroa/Introduccion_a_Python
+\end_layout
+
 \end_inset
 
 
