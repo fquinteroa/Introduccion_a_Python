@@ -112,10 +112,16 @@ quintero@mx1.ibm.com
 
 \begin_layout Institute
 IBM Systems IT Security Services
-\begin_inset Newline newline
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset Graphics
+	filename python-logo.png
+	scale 70
+
 \end_inset
 
-IBM de Mexico
+
 \end_layout
 
 \begin_layout Date
@@ -168,7 +174,7 @@ status open
 
 
 \backslash
-pgfdeclareimage[height=0.5cm]{institution-logo}{opensource}
+pgfdeclareimage[height=0.5cm]{institution-logo}{python-logo}
 \end_layout
 
 \begin_layout Plain Layout
@@ -178,53 +184,6 @@ pgfdeclareimage[height=0.5cm]{institution-logo}{opensource}
 logo{
 \backslash
 pgfuseimage{institution-logo}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-AtBeginSubsection[]{%
-\end_layout
-
-\begin_layout Plain Layout
-
-  
-\backslash
-frame<beamer>{ 
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-frametitle{Índice}   
-\end_layout
-
-\begin_layout Plain Layout
-
-    
-\backslash
-tableofcontents[currentsection,currentsubsection] 
-\end_layout
-
-\begin_layout Plain Layout
-
-  }
-\end_layout
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -248,30 +207,6 @@ beamerdefaultoverlayspecification{<+->}
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Contents
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset CommandInset toc
-LatexCommand tableofcontents
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Section
 Introducción
 \end_layout
@@ -303,11 +238,11 @@ Orientado a Objetos, Procedural y Funcional.
 \end_layout
 
 \begin_layout Itemize
-Facil de interactuar con C/ObjC/Java/Fortran.
+Fácil de interactuar con C/ObjC/Java/Fortran.
 \end_layout
 
 \begin_layout Itemize
-Facil de interactuar con C++ (via SWIG).
+Fácil de interactuar con C++ (via SWIG).
 \end_layout
 
 \begin_layout Itemize
@@ -321,15 +256,48 @@ Gran ambiente interactivo.
 
 \begin_deeper
 \begin_layout Itemize
-Descargas: http://www.python.org
+Descargas: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.python.org
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Documentacion: http://www.python.org/doc/
+Documentacion: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.python.org/doc/
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Libro Gratis: http://www.diveintopython.org
+Libro Gratis: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.diveintopython.org
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -362,7 +330,7 @@ Versiones de Python en la actualidad.
 version 
 \size large
 \color blue
-Actual
+actual
 \size default
 \color inherit
  es 2.7.x
@@ -403,7 +371,18 @@ Python viene pre instalado en MacOSX y Linux.
 \end_layout
 
 \begin_layout Itemize
-Los binarios de Windows se pueden descargar en http://python.org/
+Los binarios de Windows se pueden descargar en 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://python.org/
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -512,7 +491,13 @@ Para salir de Python:
 
 \family typewriter
 \color blue
-CTRL-Z ENTER
+CTRL-Z ENTER * Windows
+\end_layout
+
+\begin_layout Itemize
+
+\color blue
+CTRL-D * Linux
 \end_layout
 
 \end_deeper
@@ -581,7 +566,7 @@ Se puede hacer un archivo ejecutable y agregar lo siguiente al principio
 status open
 
 \begin_layout Plain Layout
-Baterias incluidas
+Baterías incluidas
 \end_layout
 
 \end_inset
@@ -602,7 +587,17 @@ Gran colección de módulos incluidos en la distribución estándar.
 \begin_layout Itemize
 
 \color blue
-http://docs.python.org/modindex.html
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://pypi.org
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -619,7 +614,7 @@ http://docs.python.org/modindex.html
 status open
 
 \begin_layout Plain Layout
-numpy
+Módulo numpy
 \end_layout
 
 \end_inset
@@ -653,13 +648,35 @@ numpy
 \begin_layout Standard
 • Decargass: 
 \color blue
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
 http://numpy.scipy.org/
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 • Tutorial: 
 \color blue
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
 http://www.scipy.org/Tentative_NumPy_Tutorial
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -675,7 +692,7 @@ http://www.scipy.org/Tentative_NumPy_Tutorial
 status open
 
 \begin_layout Plain Layout
-matplotlib
+Módulo matplotlib
 \end_layout
 
 \end_inset
@@ -853,9 +870,20 @@ plt.show()
 \end_layout
 
 \begin_layout Standard
-• Descargas: 
+• Descargas:
 \color blue
-http://matplotlib.sourceforge.net/
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+ http://matplotlib.sourceforge.net/
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -871,7 +899,7 @@ http://matplotlib.sourceforge.net/
 status open
 
 \begin_layout Plain Layout
-PyFITS (astronomía)
+Módulo PyFITS (astronomía)
 \end_layout
 
 \end_inset
@@ -1024,7 +1052,18 @@ No.
 \begin_layout Standard
 • Descargas: 
 \color blue
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
 http://www.stsci.edu/resources/software_hardware/pyfits
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
@@ -1040,7 +1079,7 @@ http://www.stsci.edu/resources/software_hardware/pyfits
 status open
 
 \begin_layout Plain Layout
-Lo Básico
+Empezando con lo Básico
 \end_layout
 
 \end_inset
@@ -1871,10 +1910,6 @@ return, try, while
 \end_layout
 
 \end_deeper
-\begin_layout LyX-Code
-   
-\end_layout
-
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -1906,7 +1941,7 @@ Tupla
 \begin_layout Itemize
 
 \color black
-Una secuenca ordenada 
+Una secuencia ordenada 
 \series bold
 \color blue
 inmutable
@@ -2752,7 +2787,11 @@ El operador +
 \series bold
 \size small
 \color black
-• El operador + produce una 
+• El operador 
+\color blue
++
+\color black
+ produce una 
 \color blue
 nueva
 \color black
@@ -2864,7 +2903,11 @@ El operador *
 \series bold
 \size small
 \color black
-• El operador * produce una 
+• El operador 
+\color blue
+*
+\color black
+ produce una 
 \color blue
 nueva
 \color black
@@ -4234,24 +4277,28 @@ Ejemplos:
 
 \series bold
 \shape italic
-\size tiny
-\color blue
+\size small
+\color black
 1.)
 \end_layout
 
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 if x == 3:
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 print 
+\color green
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -4265,17 +4312,21 @@ X igual a 3.
 \end_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 elif x == 2:
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 print 
+\color green
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -4289,17 +4340,21 @@ X igual a 2.
 \end_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 else:
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 print 
+\color green
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -4313,9 +4368,12 @@ X igual a otra cosa.
 \end_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 print 
+\color green
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -4344,60 +4402,72 @@ esto esta fuera del 'if'
 \color blue
       
 \series bold
- 2.)
+ 
+\size small
+\color black
+2.)
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 x = 3
 \end_layout
 
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 while x < 10:
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 if x > 7:
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 x += 2
 \end_layout
 
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 continue
 \end_layout
 
 \end_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 x = x + 1
 \end_layout
 
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 print 
+\color green
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -4410,16 +4480,18 @@ Aun en el bucle.
 
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 if x == 8:
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 break
 \end_layout
 
@@ -4427,9 +4499,12 @@ break
 \end_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 print 
+\color green
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -4453,54 +4528,65 @@ Fuera del bucle.
 \series bold
 \size tiny
 \color blue
-       3.)
+       
+\size small
+\color black
+3.)
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 for x in range(10):
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 if x > 7:
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 x += 2
 \end_layout
 
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 continue
 \end_layout
 
 \end_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 x = x + 1
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 print 
+\color green
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -4514,25 +4600,30 @@ Aun en el bucle
 \end_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 if x == 8:
 \end_layout
 
 \begin_deeper
 \begin_layout LyX-Code
 
+\series bold
 \size tiny
-\color blue
+\color black
 break
 \end_layout
 
 \end_deeper
 \begin_layout Standard
 
+\series bold
 \size tiny
-\color blue
+\color black
 print 
+\color green
+
 \begin_inset Quotes eld
 \end_inset
 
@@ -5804,6 +5895,10 @@ status open
 \end_layout
 
 \begin_layout Frame
+Presentación y Ejemplos:
+\end_layout
+
+\begin_layout Frame
 \begin_inset Flex URL
 status open
 
@@ -5812,6 +5907,10 @@ status open
 https://github.com/fquinteroa/Introduccion_a_Python
 \end_layout
 
+\end_inset
+
+
+\begin_inset VSpace 12pt
 \end_inset
 
 
