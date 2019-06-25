@@ -1,0 +1,5816 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+\usetheme{Frankfurt}
+% or ...
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding utf8
+\fontencoding T1
+\font_roman "default" "STIXGeneral"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 2
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Introducción a Python 
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subtitle
+para todos.
+\end_layout
+
+\begin_layout Author
+Fernando Quintero A.
+\begin_inset Newline newline
+\end_inset
+
+quintero@mx1.ibm.com
+\end_layout
+
+\begin_layout Institute
+IBM Systems IT Security Services
+\begin_inset Newline newline
+\end_inset
+
+IBM de Mexico
+\end_layout
+
+\begin_layout Date
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+- Usar el nombre de la conferencia o bien su abreviatura.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+- Realmente no es informativo para la audiencia, pero sí para quienes (incluyend
+o Vd.mismo) lean la presentación en línea.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+CFP 2003
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+opcional, debería ser una abreviatura del nombre de la conferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pgfdeclareimage[height=0.5cm]{institution-logo}{opensource}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+logo{
+\backslash
+pgfuseimage{institution-logo}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+AtBeginSubsection[]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+frame<beamer>{ 
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+frametitle{Índice}   
+\end_layout
+
+\begin_layout Plain Layout
+
+    
+\backslash
+tableofcontents[currentsection,currentsubsection] 
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+beamerdefaultoverlayspecification{<+->}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Contents
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Subsection
+El lenguaje Python
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El Lenguaje Python
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Lenguaje de propósito general Open Source.
+\end_layout
+
+\begin_layout Itemize
+Orientado a Objetos, Procedural y Funcional.
+\end_layout
+
+\begin_layout Itemize
+Facil de interactuar con C/ObjC/Java/Fortran.
+\end_layout
+
+\begin_layout Itemize
+Facil de interactuar con C++ (via SWIG).
+\end_layout
+
+\begin_layout Itemize
+Gran ambiente interactivo.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Descargas: http://www.python.org
+\end_layout
+
+\begin_layout Itemize
+Documentacion: http://www.python.org/doc/
+\end_layout
+
+\begin_layout Itemize
+Libro Gratis: http://www.diveintopython.org
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Versiones de Python en la actualidad.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+2.7 , 3.x ...
+\end_layout
+
+\begin_layout Itemize
+version 
+\size large
+\color blue
+Actual
+\size default
+\color inherit
+ es 2.7.x
+\end_layout
+
+\begin_layout Itemize
+La nueva versión es la 3.x aún en adopción.
+\end_layout
+
+\begin_layout Itemize
+Soporte de la versión 2.7 termina en 2020
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Instalando y ejecutando Python.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Python viene pre instalado en MacOSX y Linux.
+\end_layout
+
+\begin_layout Itemize
+Los binarios de Windows se pueden descargar en http://python.org/
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+¡Fácil!
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El intérprete de Python
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+La interfaz interactiva de python
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+% python
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+Python 2.7 (r25:51908, May 25 2012, 16:14:04)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+[GCC 4.1.2 20061115 (prerelease) (SUSE Linux)] on linux2
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+Type "help", "copyright", "credits" or "license" for more information.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+>>>
+\end_layout
+
+\begin_layout Standard
+El intérprete de python evalua:
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+>>> 3*(7+2)
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+27
+\end_layout
+
+\begin_layout Itemize
+
+\color black
+El interprete siempre esta en : >>>
+\end_layout
+
+\begin_layout Itemize
+
+\color black
+Para salir de Python:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\family typewriter
+\color blue
+CTRL-Z ENTER
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Ejecutando programas en UNIX.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+\color blue
+% python archivo.py
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Se puede hacer un archivo ejecutable y agregar lo siguiente al principio
+ del archivo : 
+\family typewriter
+\size small
+\color blue
+#!/usr/bin/env python
+\family default
+\size default
+\color inherit
+ para poder ejecutarlo.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Baterias incluidas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Gran colección de módulos incluidos en la distribución estándar.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\color blue
+http://docs.python.org/modindex.html
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+numpy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• Ofrece capacidades de Matlab en Python
+\end_layout
+
+\begin_layout Standard
+• Operaciónes rápidas de arreglos
+\end_layout
+
+\begin_layout Standard
+• Arreglos 2D, Arreglos multi-D arrays, álgebra lineal etc.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• Decargass: 
+\color blue
+http://numpy.scipy.org/
+\end_layout
+
+\begin_layout Standard
+• Tutorial: 
+\color blue
+http://www.scipy.org/Tentative_NumPy_Tutorial
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+matplotlib
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• Biblioteca de Plotting de gran calidad
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+#!/usr/bin/env python
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+import numpy as np
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+import matplotlib.mlab as mlab
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+import matplotlib.pyplot as plt
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+mu, sigma = 100, 15
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+x = mu + sigma*np.random.randn(10000)
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+# the histogram of the data
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+n, bins, patches = plt.hist(x, 50, normed=1, facecolor='green',
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+alpha=0.75)
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+# add a 'best fit' line
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+y = mlab.normpdf( bins, mu, sigma)
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+l = plt.plot(bins, y, 'r–', linewidth=1)
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+plt.xlabel('Smarts')
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+plt.ylabel('Probability')
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+plt.title(r'$
+\backslash
+mathrm{Histogram
+\backslash
+ of
+\backslash
+ IQ:}
+\backslash
+ 
+\backslash
+mu=100,
+\backslash
+ 
+\backslash
+sigma=15$')
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+plt.axis([40, 160, 0, 0.03])
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+plt.grid(True)
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+plt.show()
+\end_layout
+
+\begin_layout Standard
+• Descargas: 
+\color blue
+http://matplotlib.sourceforge.net/
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+PyFITS (astronomía)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• FITS I/O made simple:
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+>>> import pyfits
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+>>> hdulist = pyfits.open('nput.fits'
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+>>> hdulist.info()
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+Filename: test1.fits
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+No.
+ Name Type Cards Dimensions Format
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+0 PRIMARY PrimaryHDU 220 () Int16
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+1 SCI ImageHDU 61 (800, 800) Float32
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+2 SCI ImageHDU 61 (800, 800) Float32
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+3 SCI ImageHDU 61 (800, 800) Float32
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+4 SCI ImageHDU 61 (800, 800) Float32
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+>>> hdulist[0].header['argname'
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+'NGC121'
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+>>> scidata = hdulist[1].data
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+>>> scidata.shape
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+(800, 800)
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+>>> scidata.dtype.name 'loat32'
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size scriptsize
+\color blue
+>>> scidata[30:40,10:20] = scidata[1,4] = 999
+\end_layout
+
+\begin_layout Standard
+• Descargas: 
+\color blue
+http://www.stsci.edu/resources/software_hardware/pyfits
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Lo Básico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Un código de ejemplo.
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+x = 34 - 23        # Un comentario.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+y = 
+\begin_inset Quotes eld
+\end_inset
+
+Hola
+\begin_inset Quotes erd
+\end_inset
+
+         # Otro.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+z = 3.45
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+if z == 3.45 or y == 
+\begin_inset Quotes eld
+\end_inset
+
+Hola
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+x = x + 1
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+y = y + 
+\begin_inset Quotes eld
+\end_inset
+
+Mundo
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+print x
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\color blue
+print y
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Entendiendo el código anterior
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Asignación usa
+\family typewriter
+\size small
+\color blue
+ =
+\family default
+\size default
+\color inherit
+ y comparación usa 
+\family typewriter
+\size small
+\color blue
+==
+\family default
+\size default
+\color inherit
+.
+\end_layout
+
+\begin_layout Itemize
+Para números 
+\family typewriter
+\size small
+\color blue
++ - * / %
+\family default
+\size default
+\color inherit
+ .
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Uso especial de 
+\family typewriter
+\size small
+\color blue
++
+\family default
+\size default
+\color inherit
+ para la concatenación de cadenas.
+\end_layout
+
+\begin_layout Itemize
+Uso especial de 
+\family typewriter
+\size small
+\color blue
+%
+\family default
+\size default
+\color inherit
+ para el formateo de cadenas (como printf en C)
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Los operadores lógicos son palabras (
+\family typewriter
+\size small
+\color blue
+and, or, not
+\family default
+\size default
+\color inherit
+) no símbolos.
+\end_layout
+
+\begin_layout Itemize
+El comando básico de impresión es print.
+\end_layout
+
+\begin_layout Itemize
+La primera asignación a la variable la crea.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los tipos de variables no necesitan ser declaradas.
+\end_layout
+
+\begin_layout Itemize
+Python determina el tipo de variable por su cuenta.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tipos Básicos (Datatypes)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• Entero (por defecto para números)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+z = 5 / 2    # La respuesta es 2, división de enteros.
+\end_layout
+
+\begin_layout Standard
+• Flotantes
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+x = 3.456
+\end_layout
+
+\begin_layout Standard
+• Cadenas
+\end_layout
+
+\begin_layout Standard
+• Se puede usar 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ o '' para especificar
+\end_layout
+
+\begin_layout Standard
+
+\family typewriter
+\size small
+\color blue
+\begin_inset Quotes eld
+\end_inset
+
+abc
+\begin_inset Quotes erd
+\end_inset
+
+ 'abc'
+\family default
+\size default
+\color inherit
+(Lo mismo.)
+\end_layout
+
+\begin_layout Standard
+• Se pueden dar apóstrofes sin pareja dentro de las cadenas.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+\size small
+\color blue
+\begin_inset Quotes eld
+\end_inset
+
+matt's
+\begin_inset Quotes erd
+\end_inset
+
+'
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• Use triple dobles comillas para cadenas multi-línea o cadenas que contengan
+ ambos ' y 
+\begin_inset Quotes eld
+\end_inset
+
+ dentro de ellos:
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+a'b
+\begin_inset Quotes erd
+\end_inset
+
+c
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Espacios en Blanco
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los espacios en blanco son significativos en Python: especialmente en la
+ indentación y líneas nuevas.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Use nueva linea para terminar una línea de código.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Use 
+\family typewriter
+\size small
+\color blue
+
+\backslash
+
+\family default
+\size default
+\color inherit
+ cuando se deba ir a la siguiente línea de forma prematura.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+No se usan corchetes 
+\family typewriter
+\size small
+\color blue
+{ }
+\family default
+\size default
+\color inherit
+ para marcar bloques de código en Python ...
+ Se usa indentación consistente en su lugar.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La primera línea con menos indentación esta fuera del bloque.
+\end_layout
+
+\begin_layout Itemize
+La primera línea con mas indentación inicia un bloque anidado.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Los dos puntos aparecen al principio de un bloque nuevo.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+(Ej.para definiciones de clases o funciones.)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Comentarios
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los comentarios inician con 
+\family typewriter
+\color blue
+#
+\family default
+\color inherit
+ – El resto de la línea se ignora.
+\end_layout
+
+\begin_layout Itemize
+Se puede incluir una cadena de documentación como la primera línea de cualquier
+ función o clase que se defina.
+\end_layout
+
+\begin_layout Itemize
+El ambiente de desarrollo, depuración, y otras herramientas lo usan: siempre
+ es un buen estilo incluir uno..
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size small
+\color red
+def
+\color blue
+ mi_funcion(x, y):
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color green
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+Esta es una cadena de documentación.
+ Esta 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color green
+función hace ....
+ 
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\color orange
+# El código va aquí....
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Asignaciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• Asignar una variable en Python significa establecer un 
+\color blue
+nombre 
+\color inherit
+que contenga una
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+referencia
+\color inherit
+ a algún 
+\color blue
+objeto
+\color inherit
+.
+\end_layout
+
+\begin_layout Standard
+•
+\size footnotesize
+ La asignación crea referencias, no copias-
+\end_layout
+
+\begin_layout Standard
+• Los nombres en Python no tienen un tipo intrínseco.
+ Los Objetos tienen tipos.
+\end_layout
+
+\begin_layout Standard
+•
+\size footnotesize
+ Python determina el tipo de la referencia automáticamente basado en objeto
+ de datos asignado a él.
+\end_layout
+
+\begin_layout Standard
+• Se crea un nombre la primera vez que aparece en el lado izquierdo de una
+ expresión de asignación:
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\color blue
+x = 3
+\end_layout
+
+\begin_layout Standard
+• Una referencia se borra a través de garbage collection después que cualquier
+ nombre ligado a él esta fuera del scope.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Accesando nombres no existentes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• Si se trata de accesar un nombre antes de que sea creado apropiadamente
+ ( al ponerlo en el lado izquierdo de una asignación) , se obtendrá un error.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ y
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color brown
+Traceback (most recent call last):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color brown
+File "<pyshell#16>", line 1, in -toplevel
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color brown
+y
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color brown
+NameError: name '' is not defined
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ y = 3
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ y
+\end_layout
+
+\begin_layout LyX-Code
+3
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Asignación múltiple
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• Se pueden hacer asignaciones a múltiples nombres al mismo tiempo.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ x, y = 2, 3
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ x
+\end_layout
+
+\begin_layout LyX-Code
+2
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ y
+\end_layout
+
+\begin_layout LyX-Code
+3
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Reglas de nomenclatura
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los nombres son sensibles a mayúsculas o minúsculas y no pueden iniciar
+ con un número.
+ Pueden contener letras, números y guion bajo.
+\end_layout
+
+\begin_layout LyX-Code
+bob Bob _bob _2_bob_ bob_2 BoB
+\end_layout
+
+\begin_layout Standard
+• Existen algunas palabras reservadas:
+\end_layout
+
+\begin_layout LyX-Code
+
+\color brown
+and, assert, break, class, continue, def, del, elif,
+\end_layout
+
+\begin_layout LyX-Code
+
+\color brown
+else, except, exec, finally, for, from, global, if,
+\end_layout
+
+\begin_layout LyX-Code
+
+\color brown
+import, in, is, lambda, not, or, pass, print, raise,
+\end_layout
+
+\begin_layout LyX-Code
+
+\color brown
+return, try, while
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+   
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tipos de secuencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+1.
+ Tupla
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color black
+• Una secuenca ordenada 
+\series bold
+\color blue
+inmutable
+\series default
+\color black
+ de articulos
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\color black
+• los artículos pueden ser de tipo mixto, incluyendo colecciones de tipos.
+\end_layout
+
+\begin_layout Standard
+2.
+ Cadenas
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color black
+• 
+\series bold
+\size footnotesize
+\color blue
+Inmutable
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color black
+• 
+\series bold
+\size footnotesize
+Conceptualmente similar a las tuplas.
+\end_layout
+
+\begin_layout Standard
+3.
+ Lista
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\color black
+• 
+\series bold
+\size footnotesize
+\color blue
+Mutable
+\series default
+\size small
+\color black
+ secuencia ordenada de articulos de tipo mixto.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sintáxis similar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\color black
+• 
+\series bold
+Los tres tipos de secuencias (tuplas, cadenas, and listas)
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+comparten mucho de la misma sintaxis y funcionalidad.
+\end_layout
+
+\begin_layout Standard
+• Diferencias principales:
+\end_layout
+
+\begin_layout Standard
+• 
+\series bold
+\size small
+\color black
+Tuplas and cadenas son 
+\color blue
+inmutables
+\end_layout
+
+\begin_layout Standard
+• Lists son mutables
+\end_layout
+
+\begin_layout Standard
+• Las operaciones que se muestran en esta sección pueden ser aplicadas a
+ todas los tipos de secuencia.
+\end_layout
+
+\begin_layout Standard
+• 
+\series bold
+\size small
+\color black
+La mayoría de ejemplos muestran la operacion sobre uno de ellos.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tipos de secuencias 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• Las tuplas se definen usando parentesis ( y comas ).
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ tu = (23, 'abc', 4.56, (2,3), 'def')
+\end_layout
+
+\begin_layout Standard
+• Las listas se definen usando corchetes ( y comas ).
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li = [
+\begin_inset Quotes eld
+\end_inset
+
+abc
+\begin_inset Quotes erd
+\end_inset
+
+ , 34, 4.34, 23]
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 12pt
+\end_inset
+
+ • Las cadenas se definen usando comillas (
+\begin_inset Quotes eld
+\end_inset
+
+, ', o 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ st = 
+\begin_inset Quotes eld
+\end_inset
+
+Hola Mundo
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ st = 'Hola Mundo'
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ st = 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Quotes eld
+\end_inset
+
+esta es una cadena multilínea
+\end_layout
+
+\begin_layout LyX-Code
+ que usa tres comillas.
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tipos de secuencia 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+\color black
+• Se pueden accesar miembros individuales de una tupla, lista o cadena usando
+ un notación de corchetes.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+• Nótese que todas utilizan como base el índice 0.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> tu = (23, 'abc' 4.56, (2,3), 'def')
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> tu[1]      # Segundo artículo en la lista.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+'abc'
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> li = [
+\begin_inset Quotes eld
+\end_inset
+
+abc
+\begin_inset Quotes erd
+\end_inset
+
+ 34, 4.34, 23]
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> li[1]      # Segundo artículo en la lista.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+34
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> st = 
+\begin_inset Quotes eld
+\end_inset
+
+Hola Mundo
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> st[1]      # Segundo artículo en la lista.
+\end_layout
+
+\begin_layout LyX-Code
+'o'
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Indices positivos y negativos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+ 
+\family typewriter
+>>>
+\family default
+ t = (23, '
+\color green
+abc
+\color inherit
+' 4.56, (2,3), '
+\color green
+def
+\color inherit
+')
+\end_layout
+
+\begin_layout Standard
+Índice positivo: se cuenta desde la izquierda, empezando con 0.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ t[1]
+\end_layout
+
+\begin_layout LyX-Code
+'
+\color blue
+abc
+\color inherit
+'
+\end_layout
+
+\begin_layout Standard
+Búsqueda negativa: Se cuenta de la derecha, comenzando con -1.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ t[-3]
+\end_layout
+
+\begin_layout LyX-Code
+
+\color blue
+4.56
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Secciones: Regresar copia de un subconjunto 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ t = (23, 'abc' 4.56, (2,3), 
+\color green
+'def'
+\color inherit
+)
+\end_layout
+
+\begin_layout Standard
+Regresar una copia del contenedor con un subset de los miembros originales.
+ Se inicia copiando en el primer índice y se detiene 
+\bar under
+\color blue
+antes
+\bar default
+\color inherit
+ del segundo índice.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ t[1:4]
+\end_layout
+
+\begin_layout LyX-Code
+
+\color blue
+('abc' 4.56, (2,3))
+\end_layout
+
+\begin_layout Standard
+You can also use negative indices when slicing.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ t[1:-1]
+\end_layout
+
+\begin_layout LyX-Code
+
+\color blue
+('abc' 4.56, (2,3))
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Secciones: Regresando copia de un subconjunto 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ t = (23, 
+\color green
+'abc'
+\color inherit
+, 4.56, (2,3), 
+\color green
+'def'
+\color inherit
+)
+\end_layout
+
+\begin_layout Standard
+Se omite el primer índice para a hacer una copia desde el principio del
+ contenedor.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ t[:2]
+\end_layout
+
+\begin_layout LyX-Code
+
+\color blue
+(23, 'abc')
+\end_layout
+
+\begin_layout Standard
+Se omite el segundo índice para hacer una copia iniciando desde el primer
+ índice hasta el final del contenedor.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ t[2:]
+\end_layout
+
+\begin_layout LyX-Code
+
+\color blue
+(4.56, (2,3), 'def')
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Copiando la secuencia entera.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+Para hacer una 
+\color blue
+copia
+\color inherit
+ de una secuencia entera, se puede utilizar [:].
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> t[:]
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+(23, 'abc' 4.56, (2,3), 'def')
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Nótese la diferencia entre esas dos líneas para secuencias mutables:
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+>>> lista2 = lista1      # 2 nombres se apuntan a 1 ref.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+                         # Al cambiar una se afectan ambas.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+>>> lista2 = lista1[:]   # Dos copias independientes, dos referencias.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El operador 'in'
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+•
+\series bold
+\color black
+ Prueba boleana para saber si un valor esta dentro de un contenedor.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+>>> t = [1, 2, 4, 5]
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+>>> 3 in t
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+False
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+>>> 4 in t
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+True
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+>>> 4 not in t
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+False
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
+• Para cadenas, pruebas para subcadenas
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+>>> a = 'abcde'
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+>>> 'c' in a
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+True
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+>>> 'cd' in a
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+True
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+>>> 'ac' in a
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+False
+\end_layout
+
+\begin_layout Standard
+• 
+\series bold
+\color black
+Precaución: el operador 
+\color blue
+in
+\color black
+ también se usa en la sintaxis de 
+\color blue
+bucles for
+\color black
+ y 
+\color blue
+listas .
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El operador +
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+\size small
+\color black
+• El operador + produce una 
+\color blue
+nueva
+\color black
+ tupla, lista, o cadena cuyo valor es la concatenación de sus argumentos.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> (1, 2, 3) + (4, 5, 6)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+(1, 2, 3, 4, 5, 6)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> [1, 2, 3] + [4, 5, 6]
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+[1, 2, 3, 4, 5, 6]
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> 
+\begin_inset Quotes eld
+\end_inset
+
+
+\color green
+Hola
+\color black
+
+\begin_inset Quotes erd
+\end_inset
+
++ 
+\begin_inset Quotes eld
+\end_inset
+
+ 
+\begin_inset Quotes erd
+\end_inset
+
++ 
+\begin_inset Quotes eld
+\end_inset
+
+
+\color green
+Mundo
+\color black
+
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+'
+\color green
+Hola Mundo
+\color black
+'
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El operador *
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+\size small
+\color black
+• El operador * produce una 
+\color blue
+nueva
+\color black
+ tupla, lista o cadena que 
+\begin_inset Quotes eld
+\end_inset
+
+repite
+\begin_inset Quotes erd
+\end_inset
+
+ el contenido original.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> (1, 2, 3) * 3
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+(1, 2, 3, 1, 2, 3, 1, 2, 3)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> [1, 2, 3] * 3
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+[1, 2, 3, 1, 2, 3, 1, 2, 3]
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color black
+>>> 
+\begin_inset Quotes eld
+\end_inset
+
+
+\color green
+Hola
+\color black
+
+\begin_inset Quotes erd
+\end_inset
+
+*3
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+'HolaHolaHola'
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tuplas: Inmutables
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ t = (23, 
+\color green
+'abc'
+\color inherit
+, 4.56, (2,3), 
+\color green
+'def'
+\color inherit
+)
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ t[2] = 3.14
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color brown
+Traceback (most recent call last):
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color brown
+File "<pyshell#75>", line 1, in -toplevel-
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size small
+\color brown
+tu[2] = 3.14
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size small
+\color brown
+TypeError: object doesn't support item assignment
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+No se puede cambiar una tupla.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Se puede hacer una nueva tupla y asignar su referencia a un nombre usado
+ previamente
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>> t = (23, 
+\family default
+\color green
+'abc'
+\family typewriter
+\color inherit
+, 3.14, (2,3), 
+\family default
+\color green
+'def'
+\family typewriter
+\color inherit
+)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Listas: Mutables
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li = [
+\color green
+'abc'
+\color inherit
+ 23, 4.34, 23]
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li[1] = 45
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\color blue
+['abc' 45, 4.34, 23]
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\series bold
+• Se pueden cambiar las listas.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+• El nombre 
+\color blue
+li
+\color inherit
+ aún apunta a la misma referencia de memoria cuando terminamos.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+• La mutabilidad de las listas significa que no son tan rápidas como las
+ tuplas.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Operaciones sólo en listas 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size small
+>>> li = [1, 11, 3, 4, 5]
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+>>> li.append('a') # Nuestra primer exposición
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size small
+                # a la sintaxis de un método
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size small
+>>> li
+\end_layout
+
+\begin_layout LyX-Code
+
+\series bold
+\color blue
+[1, 11, 3, 4, 5, 'a' ]
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+>>> li.insert(2, 'i')
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+>>>li
+\end_layout
+
+\begin_layout LyX-Code
+
+\color blue
+[1, 11, 'i', 3, 4, 5, 'a']
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+El método 
+\color red
+extend
+\color inherit
+ vs el operador 
+\color red
++
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
++
+\color black
+ Crea una lista nueva ( con una nueva referencia de memoria)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+extend
+\color black
+ opera en la lista 
+\color blue
+li
+\color black
+ en la misma referencia.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li.extend([9, 8, 7])
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+li
+\end_layout
+
+\begin_layout LyX-Code
+
+\color blue
+[1, 2, '' 3, 4, 5, '' 9, 8, 7]
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\shape italic
+\color blue
+Confuso:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+Extend toma una lista como un argumento.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+Append toma un singleton como un argumento.
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li.append([10, 11, 12])
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li
+\end_layout
+
+\begin_layout LyX-Code
+
+\color blue
+[1, 2, '' 3, 4, 5, '' 9, 8, 7, [10, 11, 12]]
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Operaciones sólamente en listas 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+>>> li = ['a','b','c','b']  
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+>>> li.index('b')      # índice de la primera ocurrencia         
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+1
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+>>> li.count('b')      # Número de ocurrencias
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+2
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+>>> li.remove('b')     # Remueve la primera ocurrencia
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+>>> li
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color blue
+['a','b','c']
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Operaciones sólo en listas 4
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li = [5, 2, 6, 8]
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li.reverse()    # revierte la lista
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li
+\end_layout
+
+\begin_layout LyX-Code
+
+\color blue
+[8, 6, 2, 5]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\family typewriter
+>>>
+\family default
+ li.sort()      # ordena la lista
+\end_layout
+
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ li
+\end_layout
+
+\begin_layout LyX-Code
+
+\color blue
+[2, 5, 6, 8]
+\end_layout
+
+\begin_layout LyX-Code
+ 
+\family typewriter
+>>>
+\family default
+ li.sort(some_function)
+\end_layout
+
+\begin_layout LyX-Code
+     # ordena utilizando una comparación definida
+\end_layout
+
+\begin_layout LyX-Code
+     # por el usuario.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Tuplas vs Listas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Las listas son mas lentas pero mas poderosas que las tuplas
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Las listas pueden ser modificadas, y tiene muchas operaciones prácticas
+ que podemos ejecutar en ellas.
+\end_layout
+
+\begin_layout Itemize
+Las tuplas son inmutables pero tienen menos características.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Para convertir entre listas y tuplas utilice las funciones list() y tuple()
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+li = list(tu)
+\end_layout
+
+\begin_layout LyX-Code
+tu = tuple(li)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Diccionarios: Un tipo de mapeo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Los diccionarios almacenan un mapeo entre una serie de llaves y una serie
+ de valores.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Las llaves pueden ser de cualquier tipo inmutable.
+\end_layout
+
+\begin_layout Itemize
+Los valores pueden ser de cualquier tipo.
+\end_layout
+
+\begin_layout Itemize
+Un sólo diccionario puede almacenar valores de diferentes tipos.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Se puede definir, modificar, ver, buscar y borrar los pares llave-valor
+ en el diccionario.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Usando diccionarios
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d = {‘user’:‘bozo’, ‘pswd’:1234}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d[‘user’] 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+‘bozo’ 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d[‘pswd’] 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+1234 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d[‘bozo’]
+\end_layout
+
+\begin_layout LyX-Code
+
+\series bold
+\size tiny
+\color brown
+Traceback (innermost last):
+\end_layout
+
+\begin_layout LyX-Code
+
+\series bold
+\size tiny
+\color brown
+File ‘<interactive input>’ line 1, in ?
+\end_layout
+
+\begin_layout LyX-Code
+
+\series bold
+\size tiny
+\color brown
+KeyError: bozo
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d = {‘user’:‘bozo’, ‘pswd’:1234} 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d[‘user’] = ‘clown’ 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+{‘user’:‘clown’, ‘pswd’:1234}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d[‘id’] = 45 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+{‘user’:‘clown’, ‘id’:45, ‘pswd’:1234} 
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d = {'user':'bozo', 'p':1234, 'i':34}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> del d['user']       
+\series bold
+\color brown
+# Remueve uno.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+{'p':1234, 'i':34}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d.clear()           
+\series bold
+\color brown
+# Remueve todos.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+{}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d = {'user':'bozo', 'p':1234, 'i':34}
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d.keys()            
+\series bold
+\color brown
+# Lista de llaves.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+['user','p','i']
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d.values()         
+\series bold
+\color brown
+ # Lista de valores.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+['bozo' 1234, 34]
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> d.items()          
+\series bold
+\color brown
+ # Lista de tuplas.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+[('user','bozo'), ('p',1234), ('i',34)]
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Funciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color blue
+def
+\series default
+\color inherit
+ crea una función y le asigna un nombre.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color blue
+return
+\series default
+\color inherit
+ regresa un resultado.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos son pasados por asignación.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos y tipos de regreso no se declaran.
+\end_layout
+
+\begin_layout LyX-Code
+def 
+\family typewriter
+<nombre>
+\family default
+(arg1, arg2, ..., argN):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+<
+\family default
+statements
+\family typewriter
+>
+\end_layout
+
+\begin_layout LyX-Code
+return 
+\family typewriter
+<
+\family default
+val
+\family typewriter
+or>
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+def veces(x,y):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+return x*y
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Pasando argumentos a funciones.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Los argumentos se pasan por asignación.
+\end_layout
+
+\begin_layout Itemize
+Los argumentos que se pasan se asignan a nombres locales.
+\end_layout
+
+\begin_layout Itemize
+Los nombres de los argumentos asignados no afectan a quien lo llama.
+\end_layout
+
+\begin_layout Itemize
+Cambiando un argumento mutable puede afectar a quien lo llama.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+def changer(x,y):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size small
+\color blue
+x = 2          # cambia el valor local cd x sólamente
+\end_layout
+
+\begin_layout LyX-Code
+
+\size small
+\color blue
+y[0] = 'hola'  # cambia el objeto compartido.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Argumentos opcionales.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+• Se pueden definir valores por defecto para argumentos que no necesitan
+ ser especificados.
+\end_layout
+
+\begin_layout LyX-Code
+def func(a, b, c=10, d=100):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+print a, b, c, d
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ func(1,2)
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\color blue
+1 2 10 100
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+>>>
+\family default
+ func(1,2,3,4)
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\color blue
+1,2,3,4
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Gotchas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Todas las funciones en Python tienen un valor de retorno
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+aun si no hay un 
+\shape italic
+\color black
+return
+\shape default
+\color inherit
+ dentro del código.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Las funciones sin ningún valor de retorno regresan el valor especial de
+ 
+\color blue
+None
+\color black
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+No existe 
+\begin_inset Quotes eld
+\end_inset
+
+sobrecarga
+\begin_inset Quotes erd
+\end_inset
+
+ de funciones en Python.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dos funciones diferentes no pueden tener el mismo nombre, aún cuando tengan
+ diferentes argumentos.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Las funciones pueden ser usadas como cualquier otro tipo de datos estas
+ pueden ser:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Argumentos a función.
+\end_layout
+
+\begin_layout Itemize
+Regresar valores de funciones.
+\end_layout
+
+\begin_layout Itemize
+Asignarse a variables.
+\end_layout
+
+\begin_layout Itemize
+Partes de tuplas, listas, etc.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Control de flujo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+\color blue
+Ejemplos:
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\series bold
+\shape italic
+\size tiny
+\color blue
+1.)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+if x == 3:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+print 
+\begin_inset Quotes eld
+\end_inset
+
+X igual a 3.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+elif x == 2:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+print 
+\begin_inset Quotes eld
+\end_inset
+
+X igual a 2.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+else:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+print 
+\begin_inset Quotes eld
+\end_inset
+
+X igual a otra cosa.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+print 
+\begin_inset Quotes eld
+\end_inset
+
+esto esta fuera del 'if'
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\family typewriter
+\size tiny
+\color blue
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+      
+\series bold
+ 2.)
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+x = 3
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+while x < 10:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+if x > 7:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+x += 2
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+continue
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+x = x + 1
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+print 
+\begin_inset Quotes eld
+\end_inset
+
+Aun en el bucle.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+if x == 8:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+break
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+print 
+\begin_inset Quotes eld
+\end_inset
+
+Fuera del bucle.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\series bold
+\size tiny
+\color blue
+       3.)
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+for x in range(10):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+if x > 7:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+x += 2
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+continue
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+x = x + 1
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+print 
+\begin_inset Quotes eld
+\end_inset
+
+Aun en el bucle
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+if x == 8:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color blue
+break
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\size tiny
+\color blue
+print 
+\begin_inset Quotes eld
+\end_inset
+
+Fuera del bucle.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+¿Porqué usar módulos?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Reuso de código.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Las rutinas pueden ser llamadas múltiples veces dentro de un programa.
+\end_layout
+
+\begin_layout Itemize
+Las rutinas pueden ser utilizadas por múltiples programas.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Particionamiento de Namespace.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Agrupar datos junto con funciones utilizadas para esos datos.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Implementar servicios compartidos o datos.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Puede proveer estructuras globales de datos que se accesan por múltiples
+ subprogramas.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Módulos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Los módulos son funciones y variables definidos en archivos separados.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+Los artículos son importados utilizando 
+\color blue
+from
+\color black
+ o 
+\color blue
+import
+\color black
+.
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+from module import function
+\end_layout
+
+\begin_layout LyX-Code
+function()
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+import module
+\end_layout
+
+\begin_layout LyX-Code
+module.function()
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Los módulos son 
+\color blue
+Namespaces
+\color black
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Se pueden utilizar para organizar nombres de variables, p.e.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+atomo.posicion = atomo.posicion - molecula.posicion
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Clases y Objetos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\series bold
+\shape italic
+\color black
+Qué es un objeto?
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+Un artículo de software que contiene variables y métodos.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+El diseño orientado a objetos se enfoca en:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Encapsulación:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Dividir el código en una interfaz pública y una implementación privada de
+ dicho interfaz.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Polimorfismo:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La habilidad de sobrecargar operadores estándar de tal manera que tengan
+ el comportamiento apropiado basado en su contexto.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Herencia:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La habilidad de crear subclases que contengan especializaciones de sus padres.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Clase de Ejemplo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+class atomo(objecto):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+def __init__(self,noat,x,y,z):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+self.noat = noat
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+self.posicion = (x,y,z)
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+def simbolo(self):     # un metodo de la clase
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+return NoAt_a_Simbolo[noat]
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+def __repr__(self):   # sobrecarga impresion
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+return '%d %10.4f %10.4f %10.4f' %
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+(self.noat, self.posicion[0],
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+self.posicion[1],self.posicion[2])
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+>>> at = atomo(6,0.0,1.0,2.0)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+>>> print at
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+6 0.0000 1.0000 2.0000
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+>>> at.simbolo()
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+'C'
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Clase Átomo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Sobrecarga el constructor por omisión.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+Define las variables de la clase (noat,posicion) que son persistentes y
+ locales al objeto atomo.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+La mejor manera de manejar memoria compartida:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+En lugar de pasar una lista larga de argumentos, encapsular algunos de estos
+ datos en un objeto y pasar el objeto.
+\end_layout
+
+\begin_layout Itemize
+Resultados mucho mas limpios.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Sobrecarga el operador
+\series default
+\color inherit
+ 
+\series bold
+\color blue
+print
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Ahora queremos usar la clase atomo para construir moléculas.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Clase Molécula
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+class molecula:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+def __init__(self,nombre='Generico'):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+self.nombre = nombre
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+self.lista_atomo = []
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+def agrega_atomo(self,atomo):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+self.lista_atomo.append(atomo)
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+def __repr__(self):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+str = 'Esta es una molecula llamada %s
+\backslash
+n' % self.nombre
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+str = str+'Tiene %d atomos
+\backslash
+n' % len(self.lista_atomo)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+for atomo in self.lista_atomo:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+str = str + 'atomo' + '
+\backslash
+n'
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size scriptsize
+\color black
+return str
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Usando la Clase Molécula
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+>>> mol = molecula(
+\color green
+'Agua'
+\color black
+)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+>>> at = atomo(8,0.,0.,0.)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+>>> mol.agrega_atomo(at)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+>>> mol.agrega_atomo(atomo(1,0.,0.,1.))
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+>>> mol.agrega_atomo(atomo(1,0.,1.,0.))
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+>>> print mol
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+Esta es una molecula llamada Agua
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+Tiene 3 atomos
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+8 0.000 0.000 0.000
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+1 0.000 0.000 1.000
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color blue
+1 0.000 1.000 0.000
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Nótese que la funcion 
+\color blue
+print
+\color black
+ llama la función 
+\color blue
+print
+\color black
+ de atomos.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Reuso de código: sólo se tiene que escribir el código que imprime un átomo
+ una sóla vez; esto significa que si se cambia la especificación del átomo,
+ solo se tendrá que modificar en un solo lugar.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Herencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+class qm_molecula(molecula):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+def agrega_base(self):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+self.base = []
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+for atomo in self.lista_atomo:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+self.base = agrega_bf(atomo,self.base)
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+__init__, __repr__, y __agrega_atomo__ se toman de la clase padre (molecula)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+agrega una nueva funcion agrega_base() para agregar un set base
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+Otro ejemplo de reuso de código.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Las funciones básicas no tienen que ser reescritas, sólo heredadas.
+\end_layout
+
+\begin_layout Itemize
+Menos que reescribir cuando las especificaciones cambian.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Sobrecarga
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+class qm_molecula(molecula):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+def __repr__(self):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+str = 'QM Rifa!
+\backslash
+n'
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+for atomo in self.lista_atomo:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+str = str + 'atomo' + '
+\backslash
+n'
+\end_layout
+
+\end_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+return str
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Ahora sólo heredamos __init__ y agrega_atomo del padre.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\color black
+Definimos una nueva versión de __repr__ especialmente para QM.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Agregamos a la función padre
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Algunas veces se quiere extender, mas que reemplazar las funciones padre.
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+class qm_molecula(molecula):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+def __init__(self,nombre="Generico",base="6-31G**"):
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+self.base = base
+\end_layout
+
+\begin_layout LyX-Code
+
+\size footnotesize
+\color black
+super(qm_molecula, self).__init__(nombre)
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Datos públicos y privados
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+En Python cualquier cosa con dos guiones bajos es privado.
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+__a, __mi_variable
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+\color black
+Cualquier cosa con un guion bajo es semi-privado, y te deberías sentir culpable
+ por accesar estos datos directamente.
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+_b
+\end_layout
+
+\begin_layout Itemize
+Algunas veces es útil como un paso intermedio para convertir los datos en
+ privados.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+E/S Archivos, Cadenas, Excepciones
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+      >>> try:
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+...
+     1 / 0
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+...
+ except:
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+...
+     print('Eso fue tonto!')
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+...
+ finally:
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+...
+     print('Esto se ejecuta de cualquier manera')
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+...
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+Eso fue tonto!
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+Esto se ejecuta de cualquier manera
+\end_layout
+
+\begin_layout Standard
+
+\size tiny
+\color black
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+fileptr = open('archivo')
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+somestring = fileptr.read()
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+for line in fileptr:
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+print line
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+fileptr.close()
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> a = 1
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> b = 2.4
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> c = 'Juan'
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+>>> '%s tiene %d monedas por un total de $%.02f' % (c, a, b)
+\end_layout
+
+\begin_layout LyX-Code
+
+\size tiny
+\color black
+'Juan tiene 1 monedas por un total de $2.40'
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+¡Gracias!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\size giant
+\color black
+¿Dudas? 
+\end_layout
+
+\begin_layout Frame
+\begin_inset VSpace 12pt
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+Fernando Quintero
+\end_layout
+
+\begin_layout Frame
+IBM de Mexico
+\end_layout
+
+\begin_layout Frame
+quintero@mx1.ibm.com
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
